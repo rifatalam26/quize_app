@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:quize_app/View/question_page1.dart';
+import 'package:get/get.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -12,7 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child:Scaffold(
+      child: Scaffold(
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(10.0),
@@ -35,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: CircleAvatar(
                             radius: 35,
                             backgroundImage:
-                            AssetImage("assets/image/flower pic.jpeg"),
+                                AssetImage("assets/image/flower pic.jpeg"),
                           ),
                         ),
                         Column(
@@ -46,7 +47,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text(
                                   "সর্বশেষ স্কোর-",
                                   style: TextStyle(
-                                      fontSize: 18, fontWeight: FontWeight.bold),
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
                                 ),
                                 Text(" 10(সৃষ্টিকর্তা)",
                                     style: TextStyle(
@@ -64,13 +66,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                     width: 110,
                                     decoration: BoxDecoration(
                                         color: Colors.deepOrange,
-                                        borderRadius: BorderRadius.circular(20)),
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
                                     child: Center(
                                         child: Text(
-                                          "সব স্কোর দেখুন!",
-                                          style:
-                                          TextStyle(fontWeight: FontWeight.bold),
-                                        )),
+                                      "সব স্কোর দেখুন!",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    )),
                                   ),
                                 ),
                                 Container(
@@ -81,9 +84,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                       borderRadius: BorderRadius.circular(20)),
                                   child: Center(
                                       child: Text(
-                                        "রেটিং দিন!",
-                                        style: TextStyle(fontWeight: FontWeight.bold),
-                                      )),
+                                    "রেটিং দিন!",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  )),
                                 )
                               ],
                             )
@@ -100,7 +104,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
-                      onTap: (){},
+                      onTap: () {
+                        Navigator.push(context,
+                       MaterialPageRoute(builder: (context) => QuestionPage1()));
+                        //Get.to(QuestionPage1());
+                      },
                       child: Card(
                         elevation: 10,
                         shadowColor: Colors.black,
@@ -115,9 +123,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [
                               CircleAvatar(
                                 radius: 50,
-                                // backgroundColor: Colors.blueGrey,
-                                backgroundImage:
-                                AssetImage("assets/image/i love allah.jpeg"),
+                                backgroundImage: AssetImage(
+                                    "assets/image/i love allah.jpeg"),
                               ),
                               Text(
                                 "সৃষ্টিকর্তা",
@@ -130,7 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     InkWell(
-                      onTap: (){},
+                      onTap: () {},
                       child: Card(
                         elevation: 10,
                         shadowColor: Colors.black,
@@ -147,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 radius: 50,
                                 // backgroundColor: Colors.blueGrey,
                                 backgroundImage:
-                                AssetImage("assets/image/madina.jpeg"),
+                                    AssetImage("assets/image/madina.jpeg"),
                               ),
                               Text(
                                 "নবী-রাসুল",
@@ -168,7 +175,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
-                      onTap:(){} ,
+                      onTap: () {},
                       child: Card(
                         elevation: 10,
                         shadowColor: Colors.black,
@@ -185,7 +192,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 radius: 50,
                                 // backgroundColor: Colors.blueGrey,
                                 backgroundImage:
-                                AssetImage("assets/image/iman image.jpeg"),
+                                    AssetImage("assets/image/iman image.jpeg"),
                               ),
                               Text(
                                 "ঈমান",
@@ -198,7 +205,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     InkWell(
-                      onTap: (){},
+                      onTap: () {},
                       child: Card(
                         elevation: 10,
                         shadowColor: Colors.black,
@@ -215,7 +222,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 radius: 50,
                                 // backgroundColor: Colors.blueGrey,
                                 backgroundImage:
-                                AssetImage("assets/image/namg image.jpeg"),
+                                    AssetImage("assets/image/namg image.jpeg"),
                               ),
                               Text(
                                 "নামাজ",
@@ -236,7 +243,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
-                      onTap: (){},
+                      onTap: () {},
                       child: Card(
                         elevation: 10,
                         shadowColor: Colors.black,
@@ -252,8 +259,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               CircleAvatar(
                                 radius: 50,
                                 // backgroundColor: Colors.blueGrey,
-                                backgroundImage:
-                                AssetImage("assets/image/allah image 2.png"),
+                                backgroundImage: AssetImage(
+                                    "assets/image/allah image 2.png"),
                               ),
                               Text(
                                 "সৃষ্টিকর্তা",
@@ -266,7 +273,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     InkWell(
-                      onTap: (){},
+                      onTap: () {},
                       child: Card(
                         elevation: 10,
                         shadowColor: Colors.black,
@@ -283,7 +290,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 radius: 50,
                                 // backgroundColor: Colors.blueGrey,
                                 backgroundImage:
-                                AssetImage("assets/image/mokka image.jpeg"),
+                                    AssetImage("assets/image/mokka image.jpeg"),
                               ),
                               Text(
                                 "হজ",
@@ -304,7 +311,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
-                      onTap: (){},
+                      onTap: () {},
                       child: Card(
                         elevation: 10,
                         shadowColor: Colors.black,
@@ -320,8 +327,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               CircleAvatar(
                                 radius: 50,
                                 // backgroundColor: Colors.blueGrey,
-                                backgroundImage:
-                                AssetImage("assets/image/i love allah.jpeg"),
+                                backgroundImage: AssetImage(
+                                    "assets/image/i love allah.jpeg"),
                               ),
                               Text(
                                 "সৃষ্টিকর্তা",
@@ -334,7 +341,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     InkWell(
-                      onTap: (){},
+                      onTap: () {},
                       child: Card(
                         elevation: 10,
                         shadowColor: Colors.black,
@@ -351,7 +358,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 radius: 50,
                                 // backgroundColor: Colors.blueGrey,
                                 backgroundImage:
-                                AssetImage("assets/image/madina.jpeg"),
+                                    AssetImage("assets/image/madina.jpeg"),
                               ),
                               Text(
                                 "নবী-রাসুল",
