@@ -1,15 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:quize_app/View/question_page2.dart';
 
-class QuestionPage1 extends StatefulWidget {
-  const QuestionPage1({super.key});
+class QuestionPage2 extends StatefulWidget {
+  const QuestionPage2({super.key});
 
   @override
-  State<QuestionPage1> createState() => _QuestionPage1State();
+  State<QuestionPage2> createState() => _QuestionPage2State();
 }
 
-class _QuestionPage1State extends State<QuestionPage1> {
+class _QuestionPage2State extends State<QuestionPage2> {
   bool check = false;
   bool check1 = false;
   bool check2 = false;
@@ -46,14 +45,14 @@ class _QuestionPage1State extends State<QuestionPage1> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "আল্লাহকে একক সত্বা হিসে ",
+                            "কোন পর্বতের গুহায় মহানবী (স.)",
                             style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.deepOrange),
                           ),
                           Text(
-                            "স্বীকার ও বিশ্বাস করাকে কি বলে?",
+                            "-এর নিকট ওহী নাযিল হয়",
                             style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -97,7 +96,7 @@ class _QuestionPage1State extends State<QuestionPage1> {
                               width: 10,
                             ),
                             Text(
-                              "তাওহিদ।",
+                              "সাফা।",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20,
@@ -121,7 +120,7 @@ class _QuestionPage1State extends State<QuestionPage1> {
                               width: 10,
                             ),
                             Text(
-                              "আকাঈদ।।",
+                              "মারওয়া।",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20,
@@ -145,7 +144,7 @@ class _QuestionPage1State extends State<QuestionPage1> {
                               width: 10,
                             ),
                             Text(
-                              "রিসালাত।।",
+                              "হেরা।",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20,
@@ -169,7 +168,7 @@ class _QuestionPage1State extends State<QuestionPage1> {
                               width: 10,
                             ),
                             Text(
-                              "নবুইয়্যত।।",
+                              "সওর।",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20,
@@ -179,8 +178,7 @@ class _QuestionPage1State extends State<QuestionPage1> {
                         ),
                         InkWell(
                           onTap: (){
-                           Navigator.push(context,
-                               MaterialPageRoute(builder: (context)=> QuestionPage2()));
+                            print("fhr------");
                           },
                           child: Container(
                             height: 40,

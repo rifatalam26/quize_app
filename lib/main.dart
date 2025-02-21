@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'View/home_screen.dart';
 import 'View/question_page1.dart';
+import 'View/question_page2.dart';
 
 void main() {
   runApp(const MyApp());
