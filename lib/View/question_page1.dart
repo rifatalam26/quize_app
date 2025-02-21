@@ -9,6 +9,10 @@ class QuestionPage1 extends StatefulWidget {
 }
 
 class _QuestionPage1State extends State<QuestionPage1> {
+  bool check = false;
+  bool check1 = false;
+  bool check2 = false;
+  bool check3 = false;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -59,7 +63,145 @@ class _QuestionPage1State extends State<QuestionPage1> {
                     ],
                   ),
                 ),
-              )
+              ),
+              Card(
+                elevation: 10,
+                shadowColor: Colors.black,
+                margin: EdgeInsets.only(top: 20),
+                child: Container(
+                  height: 300,
+                  width: 350,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Row(
+                          children: [
+                            Checkbox(
+                                activeColor: Colors.blue,
+                                checkColor: Colors.black,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(7)),
+                                value: check,
+                                onChanged: (c) {
+                                  check = c!;
+                                  setState(() {});
+                                }),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              "তাওহিদ।",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.deepOrange),
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                                activeColor: Colors.blue,
+                                checkColor: Colors.black,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(7)),
+                                value: check1,
+                                onChanged: (c) {
+                                  check1 = c!;
+                                  setState(() {});
+                                }),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              "আকাঈদ।।",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.deepOrange),
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                                activeColor: Colors.blue,
+                                checkColor: Colors.black,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(7)),
+                                value: check2,
+                                onChanged: (c) {
+                                  check2 = c!;
+                                  setState(() {});
+                                }),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              "রিসালাত।।",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.deepOrange),
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                                activeColor: Colors.blue,
+                                checkColor: Colors.black,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(7)),
+                                value: check3,
+                                onChanged: (c) {
+                                  check3 = c!;
+                                  setState(() {});
+                                }),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              "নবুইয়্যত।।",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.deepOrange),
+                            )
+                          ],
+                        ),
+                        InkWell(
+                          onTap: (){
+                            print("fhr------");
+                          },
+                          child: Container(
+                            height: 40,
+                            width: 260,
+                            decoration: BoxDecoration(
+                                color: Colors.deepOrange,
+                                borderRadius: BorderRadius.circular(20)),
+                            child: Center(
+                              child: Text(
+                                "সাবমিট করুন",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                    color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
