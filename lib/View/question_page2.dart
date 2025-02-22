@@ -178,7 +178,7 @@ class _QuestionPage2State extends State<QuestionPage2> {
                         ),
                         InkWell(
                           onTap: (){
-                            print("fhr------");
+                            print("fhrdgffd------");
                           },
                           child: Container(
                             height: 40,
