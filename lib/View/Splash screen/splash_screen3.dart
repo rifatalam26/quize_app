@@ -2,21 +2,22 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quize_app/View/question_page1.dart';
+import 'package:quize_app/View/question_page2.dart';
 
-class SplashScreen2 extends StatefulWidget {
-  const SplashScreen2({super.key});
+class SplashScreen3 extends StatefulWidget {
+  const SplashScreen3({super.key});
 
   @override
-  State<SplashScreen2> createState() => _SplashScreen2State();
+  State<SplashScreen3> createState() => _SplashScreen2State();
 }
 
-class _SplashScreen2State extends State<SplashScreen2> {
+class _SplashScreen2State extends State<SplashScreen3> {
   void initState() {
     super.initState();
 
     Timer(Duration(seconds: 1), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => QuestionPage1()));
+          context, MaterialPageRoute(builder: (context) => QuestionPage2()));
     });
   }
   @override

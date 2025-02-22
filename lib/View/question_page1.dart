@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:quize_app/View/Splash%20screen/splash_screen3.dart';
 import 'package:quize_app/View/question_page2.dart';
 
 class QuestionPage1 extends StatefulWidget {
@@ -180,7 +181,7 @@ class _QuestionPage1State extends State<QuestionPage1> {
                         InkWell(
                           onTap: (){
                            Navigator.push(context,
-                               MaterialPageRoute(builder: (context)=> QuestionPage2()));
+                               MaterialPageRoute(builder: (context)=> SplashScreen3()));
                           },
                           child: Container(
                             height: 40,
