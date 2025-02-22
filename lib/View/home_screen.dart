@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quize_app/View/question_page1.dart';
 import 'package:get/get.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -10,6 +11,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // void initState() {
+  //   goscreen();
+  //   super.initState();
+  // }
+  //
+  // Future goscreen() async {
+  //   Future.delayed(Duration(seconds: 2)).then((Value) {
+  //     Navigator.push(
+  //         context, MaterialPageRoute(builder: (context) => QuestionPage1()));
+  //   });
+  // }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -105,8 +117,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     InkWell(
                       onTap: () {
-                        Navigator.push(context,
-                       MaterialPageRoute(builder: (context) => QuestionPage1()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => QuestionPage1()));
                         //Get.to(QuestionPage1());
                       },
                       child: Card(
@@ -372,6 +386,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ],
                 ),
+                // Center(
+                //   child: SizedBox(
+                //       child: CircularProgressIndicator(
+                //     color: Colors.blue,
+                //     backgroundColor: Colors.grey,
+                //     strokeWidth: 3,
+                //   )),
+                // ),
               ],
             ),
           ),
