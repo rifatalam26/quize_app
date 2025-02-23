@@ -18,17 +18,19 @@ class _QuestionPage1State extends State<QuestionPage1> {
   int counter_seconds = 10;
 
   void initState() {
-    seTimer();
+    setTimer();
     super.initState();
   }
 
-  void seTimer() async {
+  void setTimer() async {
     Future.delayed(Duration(seconds: 1)).then((value) {
       print("--------$counter_seconds-------");
       setState(() {
-        counter_seconds;
+        if(counter_seconds > 0){
+          counter_seconds--;
+          setTimer();
+        }
       });
-      seTimer();
     });
   }
 
