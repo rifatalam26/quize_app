@@ -45,6 +45,7 @@ class _QuestionPage1State extends State<QuestionPage1> {
                 radius: 30,
                 backgroundColor: Colors.white,
                 child: Text(
+
                   "$counter_seconds",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
