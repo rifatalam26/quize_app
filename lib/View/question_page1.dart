@@ -15,6 +15,23 @@ class _QuestionPage1State extends State<QuestionPage1> {
   bool check1 = false;
   bool check2 = false;
   bool check3 = false;
+  int counter_seconds = 10;
+
+  void initState() {
+    seTimer();
+    super.initState();
+  }
+
+  void seTimer() async {
+    Future.delayed(Duration(seconds: 1)).then((value) {
+      print("--------$counter_seconds-------");
+      setState(() {
+        counter_seconds;
+      });
+      seTimer();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -23,6 +40,15 @@ class _QuestionPage1State extends State<QuestionPage1> {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
+              //SizedBox(height: 50,),
+              CircleAvatar(
+                radius: 30,
+                backgroundColor: Colors.white,
+                child: Text(
+                  "$counter_seconds",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
               Card(
                 margin: EdgeInsets.only(top: 100),
                 elevation: 10,
@@ -179,9 +205,11 @@ class _QuestionPage1State extends State<QuestionPage1> {
                           ],
                         ),
                         InkWell(
-                          onTap: (){
-                           Navigator.push(context,
-                               MaterialPageRoute(builder: (context)=> SplashScreen3()));
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SplashScreen3()));
                           },
                           child: Container(
                             height: 40,
