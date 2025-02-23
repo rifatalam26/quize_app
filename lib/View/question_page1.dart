@@ -26,9 +26,13 @@ class _QuestionPage1State extends State<QuestionPage1> {
     Future.delayed(Duration(seconds: 1)).then((value) {
       print("--------$counter_seconds-------");
       setState(() {
-        if(counter_seconds > 0){
+        if (counter_seconds > 0) {
           counter_seconds--;
           setTimer();
+        }else{
+          print("--------End--------");
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => QuestionPage2()));
         }
       });
     });
@@ -47,7 +51,6 @@ class _QuestionPage1State extends State<QuestionPage1> {
                 radius: 30,
                 backgroundColor: Colors.white,
                 child: Text(
-
                   "$counter_seconds",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
