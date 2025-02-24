@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:quize_app/View/Splash%20screen/splash_screen3.dart';
 import 'package:quize_app/View/question_page2.dart';
 
+import 'Custom Circle/custom_circleavater.dart';
+
 class QuestionPage1 extends StatefulWidget {
   const QuestionPage1({super.key});
 
@@ -29,7 +31,7 @@ class _QuestionPage1State extends State<QuestionPage1> {
         if (counter_seconds > 0) {
           counter_seconds--;
           setTimer();
-        }else{
+        } else {
           print("--------End--------");
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => QuestionPage2()));
@@ -45,18 +47,14 @@ class _QuestionPage1State extends State<QuestionPage1> {
         body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              //SizedBox(height: 50,),
-              CircleAvatar(
-                radius: 30,
-                backgroundColor: Colors.white,
-                child: Text(
-                  "$counter_seconds",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+              SizedBox(
+                height: 50,
               ),
+              CustomCircleAvater(counter_seconds: counter_seconds),
               Card(
-                margin: EdgeInsets.only(top: 100),
+                margin: EdgeInsets.only(top: 30),
                 elevation: 10,
                 shadowColor: Colors.black,
                 child: Container(
@@ -212,6 +210,7 @@ class _QuestionPage1State extends State<QuestionPage1> {
                         ),
                         InkWell(
                           onTap: () {
+                            counter_seconds = -1;
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -246,3 +245,5 @@ class _QuestionPage1State extends State<QuestionPage1> {
     );
   }
 }
+
+
