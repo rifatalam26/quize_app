@@ -12,6 +12,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<String> cardname = ["সৃষ্টিকর্তা", "নবী-রাসুল", "ঈমান", "নামাজ", "হজ"];
+  List images=[
+    "assets/image/i love allah.jpeg",
+    "assets/image/madina.jpeg",
+    "assets/image/iman image.jpeg",
+    "assets/image/namg image.jpeg",
+    "assets/image/allah image 2.png"
+  ];
   // void initState() {
   //   goscreen();
   //   super.initState();
@@ -113,288 +121,45 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   height: 60,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => SplashScreen2()));
-                        //Get.to(QuestionPage1());
-                      },
-                      child: Card(
-                        elevation: 10,
-                        shadowColor: Colors.black,
-                        child: Container(
-                          height: 150,
-                          width: 150,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                backgroundImage: AssetImage(
-                                    "assets/image/i love allah.jpeg"),
-                              ),
-                              Text(
-                                "সৃষ্টিকর্তা",
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: Card(
-                        elevation: 10,
-                        shadowColor: Colors.black,
-                        child: Container(
-                          height: 150,
-                          width: 150,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                // backgroundColor: Colors.blueGrey,
-                                backgroundImage:
-                                    AssetImage("assets/image/madina.jpeg"),
-                              ),
-                              Text(
-                                "নবী-রাসুল",
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    InkWell(
-                      onTap: () {},
-                      child: Card(
-                        elevation: 10,
-                        shadowColor: Colors.black,
-                        child: Container(
-                          height: 150,
-                          width: 150,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                // backgroundColor: Colors.blueGrey,
-                                backgroundImage:
-                                    AssetImage("assets/image/iman image.jpeg"),
-                              ),
-                              Text(
-                                "ঈমান",
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: Card(
-                        elevation: 10,
-                        shadowColor: Colors.black,
-                        child: Container(
-                          height: 150,
-                          width: 150,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                // backgroundColor: Colors.blueGrey,
-                                backgroundImage:
-                                    AssetImage("assets/image/namg image.jpeg"),
-                              ),
-                              Text(
-                                "নামাজ",
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    InkWell(
-                      onTap: () {},
-                      child: Card(
-                        elevation: 10,
-                        shadowColor: Colors.black,
-                        child: Container(
-                          height: 150,
-                          width: 150,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                // backgroundColor: Colors.blueGrey,
-                                backgroundImage: AssetImage(
-                                    "assets/image/allah image 2.png"),
-                              ),
-                              Text(
-                                "সৃষ্টিকর্তা",
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: Card(
-                        elevation: 10,
-                        shadowColor: Colors.black,
-                        child: Container(
-                          height: 150,
-                          width: 150,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                // backgroundColor: Colors.blueGrey,
-                                backgroundImage:
-                                    AssetImage("assets/image/mokka image.jpeg"),
-                              ),
-                              Text(
-                                "হজ",
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    InkWell(
-                      onTap: () {},
-                      child: Card(
-                        elevation: 10,
-                        shadowColor: Colors.black,
-                        child: Container(
-                          height: 150,
-                          width: 150,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                // backgroundColor: Colors.blueGrey,
-                                backgroundImage: AssetImage(
-                                    "assets/image/i love allah.jpeg"),
-                              ),
-                              Text(
-                                "সৃষ্টিকর্তা",
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: Card(
-                        elevation: 10,
-                        shadowColor: Colors.black,
-                        child: Container(
-                          height: 150,
-                          width: 150,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                // backgroundColor: Colors.blueGrey,
-                                backgroundImage:
-                                    AssetImage("assets/image/madina.jpeg"),
-                              ),
-                              Text(
-                                "নবী-রাসুল",
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                // Center(
-                //   child: SizedBox(
-                //       child: CircularProgressIndicator(
-                //     color: Colors.blue,
-                //     backgroundColor: Colors.grey,
-                //     strokeWidth: 3,
-                //   )),
-                // ),
+               GridView.builder(
+                 shrinkWrap: true,
+                 itemCount: 55,
+                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                       crossAxisCount: 2
+                   ),
+                   itemBuilder: (context,index){
+                   return InkWell(
+                     onTap: () {},
+                     child: Card(
+                       elevation: 10,
+                       shadowColor: Colors.black,
+                       child: Container(
+                         height: 150,
+                         width: 150,
+                         decoration: BoxDecoration(
+                             color: Colors.white,
+                             borderRadius: BorderRadius.circular(20)),
+                         child: Column(
+                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                           children: [
+                             CircleAvatar(
+                               radius: 50,
+                               // backgroundColor: Colors.blueGrey,
+                               backgroundImage:
+                               AssetImage(images[index]),
+                             ),
+                             Text(
+                               "${cardname[index]}",
+                               style: TextStyle(
+                                   fontSize: 16, fontWeight: FontWeight.bold),
+                             )
+                           ],
+                         ),
+                       ),
+                     ),
+                   );
+                   }
+               )
               ],
             ),
           ),

@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Custom Circle/custom_circleavater.dart';
+
 class QuestionPage2 extends StatefulWidget {
   const QuestionPage2({super.key});
 
@@ -13,6 +15,8 @@ class _QuestionPage2State extends State<QuestionPage2> {
   bool check1 = false;
   bool check2 = false;
   bool check3 = false;
+
+  get counter_seconds => null;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -21,6 +25,7 @@ class _QuestionPage2State extends State<QuestionPage2> {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
+              CustomCircleAvater(counter_seconds: 1,),
               Card(
                 margin: EdgeInsets.only(top: 100),
                 elevation: 10,
@@ -177,7 +182,7 @@ class _QuestionPage2State extends State<QuestionPage2> {
                           ],
                         ),
                         InkWell(
-                          onTap: (){
+                          onTap: () {
                             print("fhrdgffd------");
                           },
                           child: Container(
