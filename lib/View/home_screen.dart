@@ -130,6 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
                    itemBuilder: (context,index){
                    return InkWell(
                      onTap: () {},
+
                      child: Card(
                        elevation: 10,
                        shadowColor: Colors.black,
