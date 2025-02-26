@@ -121,6 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   height: 60,
                 ),
+
                GridView.builder(
                  shrinkWrap: true,
                  itemCount: 55,
