@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:quize_app/View/Splash%20screen/splash_screen2.dart';
-import 'package:quize_app/View/question_page1.dart';
-import 'package:get/get.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
