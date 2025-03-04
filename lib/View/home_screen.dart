@@ -122,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                GridView.builder(
                  shrinkWrap: true,
-                 itemCount: 55,
+                 itemCount: 5,
                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                        crossAxisCount: 2
                    ),
